@@ -4,7 +4,7 @@ let headersArray = []
 //todo: try and see if you can use the history api to let you go back to previous pages
 
 async function changeArticle(docName){ //thank you stack overflow for letting me skid this code
-const text = await fetch(`wiki303/articles/${docName}.txt`)
+const text = await fetch(`/wiki303/articles/${docName}.txt`)
 .then(response => response.text())
 .then(text => {
   // Do something with the text content
