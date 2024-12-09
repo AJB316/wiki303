@@ -36,7 +36,7 @@ text = text.replaceAll(/\=\=\=.+?\=\=\=/g,"penguin")
 if(text.match(/\!PICREL\=\".+?"/)){ //articles should only have 1 picrel
   const picrel = text.match(/\!PICREL\=\".+?\"/)[0].substring(9,text.match(/\!PICREL\=\".*\"/)[0].length - 1)
   document.getElementById("picrel").src = "/wiki303" + picrel
-  text = text.replace(text.match(/\!PICREL\=\".+?\"/g),"")
+  text = text.replace(text.match(/\!PICREL\=\".+?\"/g),"") //sfhsu
 }
 
 const headers = text.match(/\=\=.*\=\=/)
