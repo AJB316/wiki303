@@ -1,0 +1,10 @@
+==Appearance==
+Pile of Sand is a 2x1x2 opaque Brick Yellow brick. Its top surface is Studs, and its bottom surface is Inlets.
+
+==Properties==
+Pile of Sand is a Part that can be stored in the Backpack. When heated, it yields [Glass.|Glass] This part is dyeable. When heated while dyed, the Glass it yields will be colored accordingly.
+Pile of Sand can be obtained by using [Forage|Tools/Starter Tools] on the shores of [any island.|Map/Map]
+==Use==
+Pile of Sand is used to obtain Glass and craft [Sandstone|Sandstone]. It can be useful as a building material because of its mass availability, as well as the fact that it is dyeable.
+!PICREL="/assets/fav.png"
+!DESC=A Pile of Sand on the ground next to a player on the shores of [Mainland|Mainland].

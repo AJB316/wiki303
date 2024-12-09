@@ -1,0 +1,77 @@
+html {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: sans-serif
+}
+
+#header {
+    display:flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+.butt {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    font-size: 140%;
+    padding:3px;
+    font-family: sans-serif;
+    margin-left: 2%;
+    cursor:pointer;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.butt:hover {
+    color: rgb(100,100,255)
+}
+
+.picrel {
+    float:none;
+    position:absolute;
+    right:5%;
+    top:15%;
+    z-index:-5;
+    width:18%;
+    border: 1px solid black;
+    display:block;
+    margin:auto;
+    text-align:center
+
+}
+
+#picrel {  /*this is the IMAGE picrel not the div container picrel */
+    width:90%;
+    text-align: center;
+    margin-top:10px
+}
+
+#body {
+    margin-left: 15%;
+    font-family: sans-serif;
+}
+
+#txt {
+overflow-wrap:break-word
+}
+
+#desc {
+    color:grey;
+    width:100%;
+    overflow-wrap: break-word;
+}
+
+.link {
+    color:cornflowerblue;
+    cursor:pointer;
+}
+
+.link:hover{
+    color:blue
+}

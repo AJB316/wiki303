@@ -1,0 +1,13 @@
+Starter Tools are the tools that you spawn with upon entering the game. They provide the basic functions needed to play the game.
+
+===Drag===
+<i id="desc">(Not to be confused with [Steel Dragger|Tools/Steel Dragger])</i>
+Used to drag and attach Parts. Particularly useful for [glitches|Miscellaneous/Glitches] and custom builds.
+===Forage===
+Harvests Parts from the environment, the speed of which scales with your [Foraging skill.|Miscellaneous/Skills]
+===Backpack===
+Used to manage Parts that you've collected or crafted. Has some special [hotkeys.|Miscellaneous/Hotkeys]
+===Eat/Drink===
+[Exactly what it says on the tin.|Food]
+===Craft===
+Used in order to [craft|Recipes] parts and tools. Vital for progression.
