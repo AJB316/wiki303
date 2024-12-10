@@ -7,3 +7,4 @@ Pile of Sand can be obtained by using [Forage|Tools/Starter Tools] on the shores
 ==Use==
 Pile of Sand is used to obtain Glass and craft [Sandstone|Sandstone]. It can be useful as a building material because of its mass availability, as well as the fact that it is dyeable.
 !PICREL="/assets/fav.png"
+!DESC=A player standing next to a Pile of Sand on the shores of [Mainland|Map/Map]
