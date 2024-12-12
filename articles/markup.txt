@@ -1,5 +1,5 @@
 This page is a test for my own "markup language."
-This sentence should contain a link to the page for [sand|Pile of Sand].
+This sentence should contain a link to the page for [sand|Parts/Pile of Sand].
 yeaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 This document should contain a picture, set using !PICREL 
 !PICREL="/assets/fav.png"

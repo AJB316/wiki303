@@ -1,2 +1,26 @@
 The physical space where gameplay takes place. 
-Main, spire, magma, rockma, spring, paradise, teraphyx, goldrock, that weird split island, wormhole, desert
+# Mainland
+Biggest island in the game, lots of expansive land great for building large bases or villages. It is home to Cows and Chickens, as well as some secret areas.
+Resources:
+ Mithril,
+ Iron,
+ Trees,
+ Moss,
+ Mushrooms,
+ Small Stone
+ Pile of Sand
+# Spire
+# Bento
+# Desert
+# Spring
+# Goldrock
+# Wormhole
+# Teraphyx
+# Rockma
+# Plateau
+# Canyon
+# Flax
+# Paradise
+
+!PICREL="/assets/map.png"
+!DESC=An approximate map of the game with labels
