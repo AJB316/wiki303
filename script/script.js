@@ -54,7 +54,7 @@ if(text.match(/\!PICREL\=\".+?\"/)){ //articles should only have 1 picrel
 if(text.match(/\!DESC\=.*/)){ //articles should only have 1 desc
   const desc = text.match(/\!DESC\=.*/)[0].substring(6,text.match(/\!DESC\=.*/)[0].length)
   document.getElementById("desc").innerHTML = desc
-  text = text.replace(text.match(/\!DESC\=.*/g),"")
+  text = text.replace(text.match(/\!DESC\=.+?<br>/g),"")
 } else {
   document.getElementById("desc").innerHTML = ""
 }
