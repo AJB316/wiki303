@@ -23,7 +23,7 @@ function applyArticle(text){ //this func applies text w markup
 text = text.replaceAll("\n","<br>")
 //const links = text.match(/\[.*\|.*\]/g)
 const links = text.match(/\[.+?\]/g) // /\[.*\|.*\]/g <- this is the one i was trying to use beforehand, thank you Owen Stephens on Google Groups for the one i'm using that works now
-const headers =  text.match(/\#.+ \</g)
+const headers =  text.match(/\#.+ \<br\>/g)
 //console.log(links)
 for(const match in links){
   const split = links[match].split("|")
@@ -66,7 +66,7 @@ if(articleName==="articles"){
    
     //console.log(match)
     console.log(things[match])
-    text = text.replace(things[match],`<i class="link" onclick="changeArticle('${things[match].substring(0,things[match].length-1)}')">${things[match]}</i>`)
+    text = text.replace(things[match],`<i class="link" onclick="changeArticle('${things[match].substring(0,things[match].length)}')">${things[match]}</i>`)
    
   }
 }
