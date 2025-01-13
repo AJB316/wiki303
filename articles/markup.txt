@@ -3,6 +3,6 @@ This sentence should contain a link to the page for [sand|Parts/Pile of Sand].
 yeaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 This document should contain a picture, set using !PICREL 
 !PICREL="/assets/fav.png"
-<h1> headerd </h1>
+# this should be a header
 a
 [Pile of Sand]
