@@ -61,7 +61,7 @@ if(text.match(/\!DESC\=.*/)){ //articles should only have 1 desc
 //console.log(articleName)
 
 if(articleName==="articles"){
-  let things = text.split("\r\n")
+  let things = text.split("<br>")
   for(const match in things){
    
     //console.log(match)
