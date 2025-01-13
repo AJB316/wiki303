@@ -115,6 +115,7 @@ Resources:
  Nest,
  Life Seed
 
+skibidi toilet
 
 !PICREL="/assets/map.png"
 !DESC=An approximate map of the game with labels
