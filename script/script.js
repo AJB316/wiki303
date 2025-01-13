@@ -23,7 +23,7 @@ function applyArticle(text){ //this func applies text w markup
 text = text.replaceAll("\n","<br>")
 //const links = text.match(/\[.*\|.*\]/g)
 const links = text.match(/\[.+?\]/g) // /\[.*\|.*\]/g <- this is the one i was trying to use beforehand, thank you Owen Stephens on Google Groups for the one i'm using that works now
-const headers =  text.match(/\<br\>\#.+/g)
+const headers =  text.match(/\<br\>\#.+<br>/g)
 //console.log(links)
 for(const match in links){
   const split = links[match].split("|")
@@ -54,7 +54,7 @@ if(text.match(/\!PICREL\=\".+?\"/)){ //articles should only have 1 picrel
 if(text.match(/\!DESC\=.*/)){ //articles should only have 1 desc
   const desc = text.match(/\!DESC\=.*/)[0].substring(6,text.match(/\!DESC\=.*/)[0].length)
   document.getElementById("desc").innerHTML = desc
-  text = text.replace(text.match(/\!DESC\=.+?<br>/g),"")
+  text = text.replace(text.match(/\!DESC\=.*/g),"")
 } else {
   document.getElementById("desc").innerHTML = ""
 }
