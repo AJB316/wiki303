@@ -71,7 +71,7 @@ if(articleName==="articles"){
   }
 }
 
-p.innerText = text //supposed to be innerHTML this is for debugging
+p.innerHTML = text //supposed to be innerHTML innerText is for debugging
 }
 
 changeArticle("markup")
