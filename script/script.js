@@ -20,7 +20,6 @@ applyArticle(text)
 }
 
 function applyArticle(text){ //this func applies text w markup
-  text = text.replaceAll("\n","<br>")
 //const links = text.match(/\[.*\|.*\]/g)
 const links = text.match(/\[.+?\]/g) // /\[.*\|.*\]/g <- this is the one i was trying to use beforehand, thank you Owen Stephens on Google Groups for the one i'm using that works now
 const headers =  text.match(/\#.+\</g)
@@ -71,7 +70,7 @@ if(articleName==="articles"){
   }
 }
 
-p.innerHTML = text
+p.innerHTML = text.replaceAll("\n","<br>")
 }
 
 changeArticle("markup")
