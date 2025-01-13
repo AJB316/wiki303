@@ -1,5 +1,6 @@
 const p = document.getElementById("txt")
 let article = ""
+let articleName = ""
 //todo: try and see if you can use the history api to let you go back to previous pages
 
 async function changeArticle(docName){ //thank you stack overflow for letting me skid this code
@@ -8,6 +9,7 @@ const text = await fetch(`./articles/${docName}.txt`)
 .then(text => {
   // Do something with the text content
   article = text
+  articleName = docName
 applyArticle(text)
 })
 .catch(error => {
@@ -26,7 +28,11 @@ const headers =  text.match(/\#.+/g)
 for(const match in links){
   const split = links[match].split("|")
   //console.log(match)
+  if(split.length > 1){
   text = text.replaceAll(links[match],`<i class="link" onclick="changeArticle('${split[1].substring(0,split[1].length-1)}')">${split[0].substring(1)}</i>`)
+  } else {
+    text = text.replaceAll(links[match],`<i class="link" onclick="changeArticle('${links[match].substring(1,links[match].length-1)}')">${links[match]}</i>`)
+  }
 }
 
 for(const match in headers){
@@ -39,16 +45,31 @@ for(const match in headers){
 if(text.match(/\!PICREL\=\".+?\"/)){ //articles should only have 1 picrel
   const picrel = text.match(/\!PICREL\=\".+?\"/)[0].substring(9,text.match(/\!PICREL\=\".+?\"/)[0].length - 1)
   document.getElementById("picrel").src = "./" + picrel
-  text = text.replace(text.match(/\!PICREL\=\".+?\"/g),"") //sfhsu
+  text = text.replace(text.match(/\!PICREL\=\".+?\"/g),"") 
+  document.getElementById("picrelContainer").style.display = "block"
+} else {
+ document.getElementById("picrelContainer").style.display = "none"
 }
 
 if(text.match(/\!DESC\=.*/)){ //articles should only have 1 desc
   const desc = text.match(/\!DESC\=.*/)[0].substring(6,text.match(/\!DESC\=.*/)[0].length)
   document.getElementById("desc").innerHTML = desc
   text = text.replace(text.match(/\!DESC\=.*/g),"")
+} else {
+  document.getElementById("desc").innerHTML = ""
 }
-//console.log(text)
+//console.log(articleName)
 
+if(articleName==="articles"){
+  let things = text.split("<br>")
+  for(const match in things){
+   
+    //console.log(match)
+    console.log(things[match])
+    text = text.replace(things[match],`<i class="link" onclick="changeArticle('${things[match].substring(0,things[match].length-1)}')">${things[match]}</i>`)
+   
+  }
+}
 
 p.innerHTML = text
 }

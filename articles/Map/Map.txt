@@ -1,26 +1,120 @@
-The physical space where gameplay takes place. 
+The physical space where gameplay takes place.
+Every island in the game shares some of the same resources, listed here:
+    Pile of Sand,
+    Small Stone,
+    Small Bush Stump,
+    Small Tree Stump,
+    Small Leaves,
+    Large Leaves,
+    Boulder
 # Mainland
 Biggest island in the game, lots of expansive land great for building large bases or villages. It is home to Cows and Chickens, as well as some secret areas.
 Resources:
  Mithril,
  Iron,
- Trees,
+ Sulphur,
  Moss,
- Mushrooms,
- Small Stone
- Pile of Sand
+ Mushroom,
+ Raw Chicken,
+ Raw Beef,
+ Crude Oil,
+ Corn,
+ Stalk,
+ Herb
 # Spire
+Tall, snowy island rich in minerals.
+Resources:
+ Gold,
+ Mithril,
+ Sulphur,
+ Coal,
+ Iron,
+ Snow
+
 # Bento
+Relatively small island home to Bentos.
+Resources:
+ Berry,
+ Small Stick,
+ Bento Hide
+
 # Desert
+Large expanse of sand next to a mountain.
+Resources:
+ Gold,
+ Mithril,
+ Prickly Pear,
+ Prickly Pear Leaf
+
 # Spring
+Small island next to Mainland with a pool on top.
+Resources:
+ Coal,
+ Chromite,
+ Gold,
+ Wheat,
+ Pile of Dirt,
+ Large Pile of Dirt,
+ Clay
+
 # Goldrock
 # Wormhole
+Very small, practically useless island high in the sky
+Resources:
+ Snow
 # Teraphyx
+Horseshoe-shaped island home to aggressive Teraphyx
+Resources:
+ Wheat,
+ Carrot,
+ Carrot Leaves,
+ Clay,
+ Pile of Dirt,
+ Large Pile of Dirt,
+ Raw Teraphyx Meat,
+ Teraphyx Horn
 # Rockma
+Home to Rockmas, rich in stone and ores
+Resources:
+ Gold,
+ Iron,
+ Rockma Hide,
+ Coal,
+ Iron
 # Plateau
+Elevated island with some ores and resources.
+Resources:
+ Onion
+ Onion Shoot,
+ Chromite,
+ Coal,
+ Mushroom,
+ Iron
 # Canyon
+Island seperated in half.
+Resources:
+ Coal,
+ Gold
 # Flax
+Small island with herbs and flowers.
+Resources:
+ Flax Flower,
+ Flax,
+ Iron,
+ Herb
 # Paradise
+Medium sized island home to lots of plants.
+Resources:
+ Apple,
+ Berry,
+ Wheat,
+ Onion,
+ Onion Shoot,
+ Raw Mole Poblano,
+ Mole Egg,
+ Nest,
+ Life Seed
+
 
 !PICREL="/assets/map.png"
 !DESC=An approximate map of the game with labels

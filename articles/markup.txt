@@ -5,3 +5,4 @@ This document should contain a picture, set using !PICREL
 !PICREL="/assets/fav.png"
 <h1> headerd </h1>
 a
+[Pile of Sand]

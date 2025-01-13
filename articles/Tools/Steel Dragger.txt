@@ -1,0 +1,5 @@
+# Functionality
+Upgraded version of the [starter Dragger|Tools/Starter Tools] that allows a player to connect parts to themselves or to tools. This is useful for custom inventions.
+
+# Bugs / Exploits
+When equipped, Steel Dragger can desync players' characters from the server, suspending them in one position for the game server and other players until unequipped.
