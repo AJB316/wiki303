@@ -1,5 +1,5 @@
 # Appearance
-Pile of Sand is a 2x1x2 opaque Brick Yellow brick. Its top surface is Studs, and its bottom surface is Inlets.
+Pile of Sand is a 2x1x2 Brick Yellow brick. Its top surface is Studs, and its bottom surface is Inlets.
 
 # Properties
 Pile of Sand is a Part that can be stored in the Backpack. When purified, it yields [Glass.|Glass] This part is dyeable. When purified, the Glass it yields will be colored accordingly.

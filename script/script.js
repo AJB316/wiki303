@@ -1,14 +1,16 @@
 const p = document.getElementById("txt")
 let article = ""
 let articleName = ""
+let allArticles = []
 //todo: try and see if you can use the history api to let you go back to previous pages
 
 async function changeArticle(docName){ //thank you stack overflow for letting me skid this code
-const text = await fetch(`./articles/${docName}.txt`)
+const txt = await fetch(`./articles/${docName}.txt`)
 .then(response => response.text())
 .then(text => {
   // Do something with the text content
   article = text
+  returnTs = text
   articleName = docName
 applyArticle(text)
 })
@@ -16,7 +18,18 @@ applyArticle(text)
   // Handle errors
   console.error('Error fetching file:', error);
 });
+}
 
+function rudimentarySearch(text){
+  let matches = []
+  console.log("commencing fent retrieval protocol")
+  for(let i=0;i<allArticles.length;i++){
+    if(allArticles[i].toLowerCase().includes(text.toLowerCase())){
+      console.log(allArticles[i] + " skibidi")
+      matches.push(allArticles[i])
+    }
+  }
+  return matches
 }
 
 function applyArticle(text){ //this func applies text w markup
@@ -31,14 +44,18 @@ for(const match in links){
   if(split.length > 1){
   text = text.replaceAll(links[match],`<i class="link" onclick="changeArticle('${split[1].substring(0,split[1].length-1)}')">${split[0].substring(1)}</i>`)
   } else {
-    text = text.replaceAll(links[match],`<i class="link" onclick="changeArticle('${links[match].substring(1,links[match].length-1)}')">${links[match]}</i>`)
+    text = text.replaceAll(links[match],`<i class="link" onclick="changeArticle('${rudimentarySearch(links[match].substring(1,links[match].length-1))}')">${links[match]}</i>`)
+    console.log(links[match]+"sigma")
   }
 }
 
-for(const match in headers){
+for(const match in headers){ 
   text = text.replace(headers[match],`<h1>${headers[match].replace("# ","")}</h1>`)
   console.log(headers)
 }
+
+
+
 
 
 
@@ -61,11 +78,12 @@ if(text.match(/\!DESC\=.*/)){ //articles should only have 1 desc
 //console.log(articleName)
 
 if(articleName==="articles"){
+  allArticles = []
   let things = text.split("<br>")
   for(const match in things){
    
     //console.log(match)
-    console.log(things[match])
+    allArticles.push(things[match])
     text = text.replace(things[match],`<i class="link" onclick="changeArticle('${things[match].substring(0,things[match].length)}')">${things[match]}</i>`)
    
   }
@@ -74,4 +92,5 @@ if(articleName==="articles"){
 p.innerHTML = text //supposed to be innerHTML innerText is for debugging
 }
 
+changeArticle("articles")
 changeArticle("markup")

@@ -10,4 +10,4 @@ Used to manage Parts that you've collected or crafted.
 ===Eat/Drink===
 [Exactly what it says on the tin.|Food]
 ===Craft===
-Used in order to [craft|Recipes] parts and tools. Vital for progression.
+Used in order to [craft|Recipes] parts and tools. Vital for gameplay.
