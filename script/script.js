@@ -97,7 +97,7 @@ p.innerHTML = text //supposed to be innerHTML innerText is for debugging
 if(firstTime){
   firstTime = false
 } else {
-  history.pushState(articleName,"",`/?article=${articleName}`)
+  history.pushState(articleName,"",`/wiki303/?article=${articleName}`)
 }
 
 }
