@@ -6,6 +6,7 @@ let firstTime = true; //Holy spaghetti. I'm using this for the History API, just
 //todo: try and see if you can use the history api to let you go back to previous pages
 const url = new URL(window.location)
 const urlSearchParams = new URLSearchParams(url.search)
+const search = document.getElementById("search")
 
 async function changeArticle(docName){ //thank you stack overflow for letting me skid this code
 const txt = await fetch(`./articles/${docName}.txt`)
@@ -34,6 +35,9 @@ function rudimentarySearch(text){
   return matches
 }
 
+
+
+
 function applyArticle(text){ //this func applies text w markup
 text = text.replaceAll("\n","<br>")
 //const links = text.match(/\[.*\|.*\]/g)
@@ -44,9 +48,9 @@ for(const match in links){
   const split = links[match].split("|")
   //console.log(match)
   if(split.length > 1){
-  text = text.replaceAll(links[match],`<i class="link" onclick="changeArticle('${split[1].substring(0,split[1].length-1)}')">${split[0].substring(1)}</i>`)
+  text = text.replaceAll(links[match],`<i class="link" title="${split[1].substring(0,split[1].length-1)}" onclick="changeArticle('${split[1].substring(0,split[1].length-1)}')">${split[0].substring(1)}</i>`)
   } else {
-    text = text.replaceAll(links[match],`<i class="link" onclick="changeArticle('${rudimentarySearch(links[match].substring(1,links[match].length-1))}')">${links[match].substring(1,links[match].length-1)}</i>`)
+    text = text.replaceAll(links[match],`<i class="link" title="${links[match]}" onclick="changeArticle('${rudimentarySearch(links[match].substring(1,links[match].length-1))}')">${links[match].substring(1,links[match].length-1)}</i>`)
     console.log(links[match]+"sigma")
   }
 }
@@ -55,10 +59,6 @@ for(const match in headers){
   text = text.replace(headers[match],`<h1>${headers[match].replace("# ","")}</h1>`)
   console.log(headers)
 }
-
-
-
-
 
 
 if(text.match(/\!PICREL\=\".+?\"/)){ //articles should only have 1 picrel
@@ -91,7 +91,7 @@ if(articleName==="articles"){
   }
 }
 
-p.innerHTML = text //supposed to be innerHTML innerText is for debugging
+p.innerHTML = `<h1>${articleName.split("/")[1] || articleName}</h1> <hr> <br> ${text}` //supposed to be innerHTML innerText is for debugging
 
 
 if(firstTime){
@@ -106,9 +106,25 @@ if(firstTime){
 window.addEventListener("popstate",function(event){
   firstTime = true //this val was originally just to prevent the articles page from being pushed to the history, but i've found using pushState on popstate makes it so you can't go forward
   changeArticle(event.state)
-  //console.log(event.state+" go go go")
 })
 
+
+search.addEventListener("input",function(ohio){
+  console.log(ohio.data)
+})
+
+search.addEventListener("keydown",function(key){
+if(key.key=="Enter"){
+  changeArticle(rudimentarySearch(document.getElementById("search").value))
+}
+})
+
+document.getElementById("randompage").addEventListener("click",function(){
+  changeArticle(allArticles[Math.floor(Math.random()*allArticles.length)])
+})
+
+
 changeArticle("articles")
-changeArticle(urlSearchParams.get("article") || "markup")
+changeArticle(urlSearchParams.get("article") || "Home")
+
 

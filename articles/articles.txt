@@ -1,5 +1,5 @@
 Parts/Pile of Sand
+Animals/Cow
 Tools/Starter Tools
 Tools/Steel Dragger
 Map/Map
-Fanum

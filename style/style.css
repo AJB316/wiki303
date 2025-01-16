@@ -75,3 +75,13 @@ overflow-wrap:break-word
 .link:hover{
     color:blue
 }
+
+#search{
+position:relative;
+left:1.5%
+}
+
+.searchicon{
+    left:1%;
+    position:relative;
+}

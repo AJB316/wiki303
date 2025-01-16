@@ -1,0 +1,3 @@
+Mammals unique to Mainland. They drop Raw Beef on death, and have udders that can be milked to create [Milk].
+!PICREL="/assets/cow.png"
+!DESC=A cow

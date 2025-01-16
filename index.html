@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,25 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="assets/fav.png">
 </head>
+
 <body>
     <div id="header">
-        <h1 class="title" onclick="changeArticle('markup')">Wiki 303 <img src="assets/fav.png" alt="Wiki303 Logo"></h1> 
-        <p class="butt">Random page</p>
+        <h1 class="title" onclick="changeArticle('Home')">Wiki 303 <img src="assets/fav.png" alt="Wiki303 Logo"></h1>
+        <p class="butt" id="randompage">Random page</p>
         <p class="butt" onclick="changeArticle('articles')">All pages</p>
-        <img class="butt" alt="Search button" src="assets/find.png" title="Search for an article">
+        <img src="assets/find.png" class="searchicon">  <input id="search"></input>
     </div>
     <hr style="position: sticky; top: 78px">
     <div id="body" style="width:60%">
         <p id="txt"></p>
-        
+
     </div>
     <div id="picrelContainer" title="sigma">
         <img id="picrel" src="assets/TEST1.png" alt="Document picture">
         <p id="desc"></p>
     </div>
-<noscript>Please enable JavaScript in your browser to use this wiki. Thanks!</noscript>
-<script src="script/script.js"></script>
+    <noscript>Please enable JavaScript in your browser to use this wiki. Thanks!</noscript>
+    <script src="script/script.js"></script>
 </body>
+
 </html>
