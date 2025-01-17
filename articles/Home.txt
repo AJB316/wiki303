@@ -1,8 +1,2 @@
-This page is a test for my own "markup language."
-This sentence should contain a link to the page for [sand|Parts/Pile of Sand].
-yeaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-This document should contain a picture, set using !PICREL 
+Welcome to Wiki 303, a compendium for all the information you need regarding the fork of Survival 303 created by grubsteak. To get started, you can click "Random Page" or "All pages," or search for something you're curious about.
 !PICREL="/assets/fav.png"
-# this should be a header
-a blugner googus
-[Pile of Sand] skibidi fortnite
