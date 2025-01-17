@@ -12,6 +12,7 @@ h1 {
     position: sticky;
     top: 0px;
     background-color: white;
+    z-index:5
 }
 
 .butt {
@@ -78,10 +79,32 @@ overflow-wrap:break-word
 
 #search{
 position:relative;
-left:1.5%
+left:1.5%;
+width:10%;
 }
 
 .searchicon{
     left:1%;
     position:relative;
+}
+
+.searchdropdown {
+    display: none;
+    position: absolute;
+    width: 10.5%;
+    height: 105%;
+    background-color: aliceblue;
+    left:28%;
+    top: 65%;
+    z-index: 10000;
+    ali
+}
+
+hr {
+    width:95%;
+    height:0px;
+}
+
+#search-seperator {
+    margin-top:20%
 }

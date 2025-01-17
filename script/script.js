@@ -91,13 +91,13 @@ if(articleName==="articles"){
   }
 }
 
-p.innerHTML = `<h1>${articleName.split("/")[1] || articleName}</h1> <hr> <br> ${text}` //supposed to be innerHTML innerText is for debugging
+p.innerHTML = `<h1>${articleName.toString().split("/")[1] || articleName}</h1> <hr> <br> ${text}` //supposed to be innerHTML innerText is for debugging
 
 
 if(firstTime){
   firstTime = false
 } else {
-  history.pushState(articleName,"",`/wiki303/?article=${articleName}`)
+  history.pushState(articleName,"",`./?article=${articleName}`)
 }
 
 }
